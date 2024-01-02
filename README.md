@@ -4,7 +4,7 @@ This is the web client for the FeatherPanel project. It is built using Svelte an
 
 ## Installation
 
-To install a full FeatherPanel server, you can follow the instructions on the [FeatherPanel repository](https://github.com/FeatherPanel/FeatherPanel).
+To install a full FeatherPanel server, you can follow the instructions on the [FeatherPanel documentation](https://featherpanel.natoune.fr/docs/installation).
 
 If you want to install only the client for development purposes, you can run the following commands:
 
@@ -30,7 +30,29 @@ You can then add the files in the `dist` folder to the `public` folder of the Fe
 
 ## Development
 
-You can run the following command to start a development server:
+Before starting the development server, you need to create a `config.json` file in the root of the project. You can use the following template:
+
+```json
+{
+	"app": {
+		"name": "FeatherPanel Demo",
+		"url": "http://127.0.0.1:8080", // The URL of the FeatherPanel API !!!
+		"httpPort": 8080,
+		"httpsPort": 8443,
+		"ssl": false,
+		"lang": "fr",
+		"contact": "featherpanel@natoune.fr"
+	},
+	"userSettings": {
+		"enableRegistration": true,
+		"enablePasswordChange": true,
+		"enableAccountDetailsChange": true
+	},
+	"version": "1.0.0"
+}
+```
+
+You can then run the following command to start a development server:
 
 ```bash
 npm run dev
