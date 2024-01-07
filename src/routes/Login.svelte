@@ -83,7 +83,7 @@
 				} else {
 					formSubmitted = false;
 
-					if (res.error && res.error == "INVALID_CREDENTIALS") {
+					if (res.error && res.error == "UNAUTHORIZED") {
 						toast.error("Identifiants invalides.", {
 							duration: 5000,
 							position: "bottom-right",
